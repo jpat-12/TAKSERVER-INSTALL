@@ -63,9 +63,13 @@ wait 2
 echo "running install file" 
 ./Centos7_tak4.9_install.sh
 
+java -jar /opt/tak/utils/UserManager.jar usermod -A -p G0$%1vilAirPatrol624918 jpattara-ilwg.cap.gov
+
 echo "To enable lets encrypt please allow port 80" 
 echo "when post 80 is added and you have an A record in your DNS to point to this machine" 
 echo "run cd /home/atak/Downloads && ./takserver_createLECerts.sh "
+
+echo "User jpattara-ilwg.cap.gov created with a password G0$%1vilAirPatrol624918"
 
 echo "TAKSERVER INSTALL DONE" 
 
