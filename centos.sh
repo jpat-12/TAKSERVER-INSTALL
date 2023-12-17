@@ -49,11 +49,11 @@ cd /home/atak/Downloads
 sudo yum install wget
 sudo wget "https://docs.google.com/uc?export=download&confirm=t&id=1KQfiCPrN4z-v52xu48KYxUxGFRGApEpX" -O takserver-4.8-RELEASE31.noarch.rpm
 sudo wget "https://docs.google.com/uc?export=download&confirm=t&id=1n8oTPtRv4f5JS6UkeIDakQt-Z2TQdKGl" -O takserver-4.8-RELEASE45.noarch.rpm
-
+clear
 
 
 echo "please make sure the files are in the /atak/home/Downloads directory" 
-ls -la /atak/home/Downloads
+ls -la /home/atak/Downloads
 echo "please hit enter to continue" 
 read enter
 
@@ -63,10 +63,11 @@ wait 2
 echo "running install file" 
 ./Centos7_tak4.9_install.sh
 
+clear
 java -jar /opt/tak/utils/UserManager.jar usermod -A -p G0$%1vilAirPatrol624918 jpattara-ilwg.cap.gov
+sleep 2
 
-
-
+clear
 echo "Setting up for extracted war" 
 cd /opt/tak
 ./setup-for-extracted-war.sh
