@@ -12,7 +12,8 @@ sleep 2
 cd /tmp
 echo "Moved to tmp directory; cloning required repos" 
 
-PUT CLONES REPOS HERE
+git clone https://github.com/jpat-12/centos-scripts.git && cd centos-scripts
+
 
 echo "Creating ATAK user" 
 sudo useradd -m atak
@@ -45,6 +46,7 @@ cp /tmp/centos-scripts/takUserCreateCerts_doNotRunAsRoot.sh /atak/home/Downloads
 
 echo "downloading takserver" 
 cd /home/atak/Downloads
+sudo yum install wget
 sudo wget "https://docs.google.com/uc?export=download&confirm=t&id=1KQfiCPrN4z-v52xu48KYxUxGFRGApEpX" -O takserver-4.8-RELEASE31.noarch.rpm
 sudo wget "https://docs.google.com/uc?export=download&confirm=t&id=1n8oTPtRv4f5JS6UkeIDakQt-Z2TQdKGl" -O takserver-4.8-RELEASE45.noarch.rpm
 
@@ -63,7 +65,7 @@ echo "running install file"
 
 echo "To enable lets encrypt please allow port 80" 
 echo "when post 80 is added and you have an A record in your DNS to point to this machine" 
-echo "run ./takserver_createLECerts.sh" 
+echo "run cd /home/atak/Downloads && ./takserver_createLECerts.sh "
 
 echo "TAKSERVER INSTALL DONE" 
 
