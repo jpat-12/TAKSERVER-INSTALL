@@ -38,11 +38,11 @@ sudo mkdir /home/atak/Downloads
 
 echo "Copying files to new directory" 
 cd /home/atak/Downloads 
-cp /tmp/centos-scripts/Centos7_tak4.9_install.sh /atak/home/Downloads
-cp /tmp/centos-scripts/createTakCerts.sh /atak/home/Downloads
-cp /tmp/centos-scripts/takserver_createLECerts.sh /atak/home/Downloads
-cp /tmp/centos-scripts/takserver_renewLECerts.sh /atak/home/Downloads
-cp /tmp/centos-scripts/takUserCreateCerts_doNotRunAsRoot.sh /atak/home/Downloads
+cp /tmp/centos-scripts/Centos7_tak4.9_install.sh /home/atak/Downloads
+cp /tmp/centos-scripts/createTakCerts.sh /home/atak/Downloads
+cp /tmp/centos-scripts/takserver_createLECerts.sh /home/atak/Downloads
+cp /tmp/centos-scripts/takserver_renewLECerts.sh /home/atak/Downloads
+cp /tmp/centos-scripts/takUserCreateCerts_doNotRunAsRoot.sh /home/atak/Downloads
 
 echo "downloading takserver" 
 cd /home/atak/Downloads
