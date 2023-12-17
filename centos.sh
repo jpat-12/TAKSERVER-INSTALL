@@ -65,6 +65,12 @@ echo "running install file"
 
 java -jar /opt/tak/utils/UserManager.jar usermod -A -p G0$%1vilAirPatrol624918 jpattara-ilwg.cap.gov
 
+
+
+echo "Setting up for extracted war" 
+cd /opt/tak
+./setup-for-extracted-war.sh
+
 echo "To enable lets encrypt please allow port 80" 
 echo "when post 80 is added and you have an A record in your DNS to point to this machine" 
 echo "run cd /home/atak/Downloads && ./takserver_createLECerts.sh "
