@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "installing Zip" 
+yum install zip 
+
 echo "this will set up the proper directories" 
 
 mkdir /opt/tak/certs/files/packages
