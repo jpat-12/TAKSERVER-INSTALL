@@ -78,7 +78,7 @@ if [[ "$install_ssh" =~ ^[Yy]$|^$ ]]; then
     sudo yum install -y openssh-server
     sudo systemctl enable sshd
     sudo systemctl start sshd
-    sudo vi /etc/ssh/sshd_config
+    sudo nano /etc/ssh/sshd_config
     sudo systemctl restart sshd
     echo "SSH Server installed and restarted."
     exit
