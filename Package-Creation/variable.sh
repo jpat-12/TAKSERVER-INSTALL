@@ -21,8 +21,11 @@ read httpd
 clear
 # Create or overwrite the variables file
 
+#With echo statements
+#sed -i 's|./variables.sh|echo "Address = $address" \naddress="$address"\n\n# Protocol variable\necho "Protocol = $protocol" \nprotocol="$protocol"\n\n# Port number variable\necho "Port Number = $port" \nport="$port"\n\n# Certificate Authority variable \necho "CA Name" \nca=$ca\n\n# Httpd variable \necho "httpd file path" \nhttpd=$httpd|' /opt/tak/certs/files/packages/create.sh
 
-sed -i 's|./variables.sh|echo " Address = $address" \naddress="$address"\n\n# Protocol variable\necho "Protocal = $protocol" \nprotocol="$protocol"\n\n# Port number variable\necho "Port Number = $port" \nport="$port"\n\n# Certificate Authority variable \necho "CA Name" \nca=$ca\n\n# Httpd variabls \necho "httpd file path" \nhttpd=$httpd|' /opt/tak/certs/files/packages/create.sh
+#without echo statements
+sed -i 's|./variables.sh|address="$address"\nprotocol="$protocol"\nport="$port"\nca=$ca\nhttpd=$httpd|' /opt/tak/certs/files/packages/create.sh
 
 
 # Make the variables file executable

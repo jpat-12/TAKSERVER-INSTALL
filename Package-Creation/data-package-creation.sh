@@ -17,7 +17,7 @@ echo ""
 echo "What is the name of the user" 
 read name
 clear
-./variable.sh
+<PLACE VARIABLES HERE> 
 
 
 cd /opt/tak/certs
