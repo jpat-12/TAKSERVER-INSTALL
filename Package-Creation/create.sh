@@ -126,5 +126,6 @@ mkdir finished
 cd /opt/tak/certs/files/packages 
 zip $capid.zip -r $capid
 rm -rf $capid.p12
+rm -rf $capid
 cp "$capid.zip" finished
 cp $capid.zip $httpd_path
