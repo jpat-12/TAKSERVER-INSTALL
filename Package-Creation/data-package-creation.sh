@@ -14,7 +14,7 @@ echo "What is the CAPID of the User"
 read capid
 echo ""
 echo ""
-echo "What is the namme of the user" 
+echo "What is the name of the user" 
 read name
 clear
 ./variable.sh

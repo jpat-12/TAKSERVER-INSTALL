@@ -20,29 +20,10 @@ read httpd
 
 clear
 # Create or overwrite the variables file
-cat << EOF > "/opt/tak/certs/files/packages/variables.sh"
-#!/bin/bash
 
-# TAKServer address variable
-echo " Address = $address" 
-address="$address"
 
-# Protocol variable
-echo "Protocal = $protocol" 
-protocol="$protocol"
+sed -i 's|./variables.sh|echo " Address = $address" \naddress="$address"\n\n# Protocol variable\necho "Protocal = $protocol" \nprotocol="$protocol"\n\n# Port number variable\necho "Port Number = $port" \nport="$port"\n\n# Certificate Authority variable \necho "CA Name" \nca=$ca\n\n# Httpd variabls \necho "httpd file path" \nhttpd=$httpd|' /opt/tak/certs/files/packages/create.sh
 
-# Port number variable
-echo "Port Number = $port" 
-port="$port"
-
-# Certificate Authority variable 
-echo "CA Name" 
-ca=$ca
-
-# Httpd variabls 
-echo "httpd file path" 
-httpd=$httpd
-EOF
 
 # Make the variables file executable
 chmod +x /opt/tak/certs/files/packages/variables.sh
@@ -52,4 +33,4 @@ echo "Protocol set to: $protocol"
 echo "Port number set to: $port"
 echo "CA Name set to: $ca"
 echo "httpd_path: $httpd" 
-echo "Variables file created at: /opt/tak/certs/files/packages/variables.sh"
+echo "variables added to /opt/tak/certs/files/packages/create.sh"
