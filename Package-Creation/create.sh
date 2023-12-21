@@ -72,6 +72,8 @@ cat << EOF > "$directory$capid/MANIFEST/$manifest_file"
 <Contents>
 <Content zipEntry="$capid.p12" ignore="false"/>
 <Content zipEntry="Certificate-Authority.p12" ignore="false"/>
+<Content zipEntry="Maps-Pref.zip" ignore=false/>
+<Content zipEntry="channels.zip" ignore=false/>
 <Content zipEntry="package_builder.pref" ignore="false"/>
 </Contents>
 </MissionPackageManifest>
@@ -116,6 +118,8 @@ EOF
 echo "Copying Certificate Authority" 
 cp /opt/tak/certs/files/$ca /opt/tak/certs/files/packages/Certificate-Authority.p12
 cp /opt/tak/certs/files/packages/Certificate-Authority.p12 /opt/tak/certs/files/packages/$capid/Certificate-Authority.p12
+cp /opt/tak/certs/files/packages/CAP-ILWG-ATAK-CONFIG.zip /opt/tak/certs/files/packages/$capid/CAP-ILWG-ATAK-CONFIG.zip
+
 cp /opt/tak/certs/files/$capid.p12 /opt/tak/certs/files/packages/$capid.p12
 
 

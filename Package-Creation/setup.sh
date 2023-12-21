@@ -22,3 +22,9 @@ cd /tmp/TAKSERVER-INSTALL/Package-Creation
 sudo chmod +x /tmp/TAKSERVER-INSTALL/Package-Creation/variable.sh
 ./variable.sh
 echo "variable script run" 
+
+echo "Copying FBI Connection Package" 
+cp /tmp/TAKSERVER-INSTALL/Package-Creation/Maps-Pref.zip /opt/tak/certs/files/packages/Maps-Pref.zip
+
+echo "Copying Channels Package" 
+cp /tmp/TAKSERVER-INSTALL/Package-Creation/channels.zip /opt/tak/certs/files/packages/channels.zip
