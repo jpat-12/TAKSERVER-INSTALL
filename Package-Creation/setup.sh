@@ -14,6 +14,7 @@ sudo chmod +x create.sh
 echo "created create script in packages directory"
 
 echo "run variable script" 
+cp /tmp/TAKSERVER-INSTALL/Package-Creation/var.sh /opt/tak/certs/files/packages/var.sh
 cd /tmp/TAKSERVER-INSTALL/Package-Creation
 sudo chmod +x /tmp/TAKSERVER-INSTALL/Package-Creation/variable.sh
 ./variable.sh
