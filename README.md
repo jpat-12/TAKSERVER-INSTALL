@@ -6,3 +6,6 @@ sudo yum install git && cd /tmp && git clone https://github.com/jpat-12/TAKSERVE
 ```bash
 sudo yum install git && cd /tmp && git clone https://github.com/jpat-12/TAKSERVER-INSTALL.git && cd TAKSERVER-INSTALL/Package-Creation && sudo chmod +x setup.sh && sudo chmod +x variable.sh && sudo chmod +x data-package-creation.sh && ./setup.sh
 ```
+```bash
+rm -rf /opt/tak/certs/files/packages && rm -rf /tmp/TAKSERVRE-INSTALL
+```

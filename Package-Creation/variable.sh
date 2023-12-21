@@ -25,12 +25,10 @@ clear
 #sed -i 's|./variables.sh|echo "Address = $address" \naddress="$address"\n\n# Protocol variable\necho "Protocol = $protocol" \nprotocol="$protocol"\n\n# Port number variable\necho "Port Number = $port" \nport="$port"\n\n# Certificate Authority variable \necho "CA Name" \nca=$ca\n\n# Httpd variable \necho "httpd file path" \nhttpd=$httpd|' /opt/tak/certs/files/packages/create.sh
 
 #without echo statements
-sed -i 's|./variables.sh|address="$address"\nprotocol="$protocol"\nport="$port"\nca=$ca\nhttpd=$httpd|' /opt/tak/certs/files/packages/create.sh
+sed -i 's|<PLACE VARIABLES HERE>|address="$address"\nprotocol="$protocol"\nport="$port"\nca=$ca\nhttpd=$httpd|' /opt/tak/certs/files/packages/create.sh
 
 
 # Make the variables file executable
-chmod +x /opt/tak/certs/files/packages/variables.sh
-
 echo "TAKServer address set to: $address"
 echo "Protocol set to: $protocol"
 echo "Port number set to: $port"
