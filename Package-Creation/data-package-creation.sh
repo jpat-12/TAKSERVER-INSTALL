@@ -6,7 +6,6 @@ echo ""
 echo "press enter to continue" 
 read enter
 
-read -p "what is the absolute file path to the directory that Apache2 uses. (I.E. Apache2's Default is /var/www/html) " Absolute_path
 echo "make a few lines that call on another script to make the variable and then use that variable and comment out this question after the first time it is being run" 
 
 cd /opt/tak/certs 
@@ -77,7 +76,8 @@ cat << EOF > "$directory$capid/MANIFEST/$manifest_file"
 EOF
 
 echo "Running Varriables Script" 
-cd /opt/tak/certs/files/packages/variables.sh
+cd /opt/tak/certs/files/packages/
+./variables.sh
 echo ""
 
 echo "Creating Package_Builder.pref"
@@ -112,16 +112,17 @@ EOF
 
 
 echo "Copying Certificate Authority" 
-cp /opt/tak/certs/files/$ca.p12 /opt/tak/certs/files/packages/Certificate-Authority.p12
+cp /opt/tak/certs/files/$ca /opt/tak/certs/files/packages/Certificate-Authority.p12
 cp /opt/tak/certs/files/$capid.p12 /opt/tak/certs/files/packages/$capid.p12
 
 
-cd /opt/tak/certs/packages 
+cd /opt/tak/certs/files/packages 
 
 mkdir finished
 
-cd /opt/tak/certs/packages 
-zip -r "$capid.zip" "$capid"
+cd /opt/tak/certs/files/packages 
+zip -r $capid.zip $capid
+rm -rf $capid.p12
 cp "$capid.zip" finished
 cp $capid.zip $httpd_path
 

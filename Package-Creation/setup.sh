@@ -7,6 +7,8 @@ echo "this will set up the proper directories"
 mkdir /opt/tak/certs/files/packages
 cd /opt/tak/certs/files/packages
 
+mkdir /opt/tak/certs/files/packages/finished
+
 cp /tmp/TAKSERVER-INSTALL/Package-Creation/data-package-creation.sh /opt/tak/certs/files/packages/create.sh
 chmod +x /opt/tak/certs/files/packages/create.sh
 echo "created create script in packages directory"
