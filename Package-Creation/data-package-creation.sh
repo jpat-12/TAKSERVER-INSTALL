@@ -22,11 +22,11 @@ clear
 
 
 cd /opt/tak/certs
-./makeCert.sh client $CAPID
+./makeCert.sh client $capid
 
 mkdir /opt/tak/certs/files/packages/$capid
 
-cp /opt/tak/certs/files/$CAPID.p12 /opt/tak/certs/files/packages/$capid
+cp /opt/tak/certs/files/$capid.p12 /opt/tak/certs/files/packages/$capid
 
 clear
 echo "Creating User Package" 
@@ -76,6 +76,10 @@ cat << EOF > "$directory$capid/MANIFEST/$manifest_file"
 </MissionPackageManifest>
 EOF
 
+echo "Running Varriables Script" 
+cd /opt/tak/certs/files/packages/variables.sh
+echo ""
+
 echo "Creating Package_Builder.pref"
 
 cat << EOF > "$directory$capid/package_builder.pref"
@@ -107,18 +111,17 @@ EOF
 
 
 
-
-
-
-
-
-
-
 echo "Copying Certificate Authority" 
-cp /opt/tak/certs/files/<INSERT-NAME-HERE> /opt/tak/certs/files/packages/Certificate-Authority.p12
+cp /opt/tak/certs/files/$ca.p12 /opt/tak/certs/files/packages/Certificate-Authority.p12
+cp /opt/tak/certs/files/$capid.p12 /opt/tak/certs/files/packages/$capid.p12
+
+
+cd /opt/tak/certs/packages 
 
 mkdir finished
 
-cp $capid.zip finished
-cp $capid.zip $Absolute_path
+cd /opt/tak/certs/packages 
+zip -r "$capid.zip" "$capid"
+cp "$capid.zip" finished
+cp $capid.zip $httpd_path
 

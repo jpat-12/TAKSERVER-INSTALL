@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "this will set up the proper directories" 
 
 
