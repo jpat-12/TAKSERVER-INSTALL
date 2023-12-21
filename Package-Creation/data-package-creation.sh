@@ -24,9 +24,6 @@ clear
 cd /opt/tak/certs
 ./makeCert.sh client $CAPID
 
-mkdir /opt/tak/certs/files/packages
-cd /opt/tak/certs/files/packages
-
 mkdir /opt/tak/certs/files/packages/$capid
 
 cp /opt/tak/certs/files/$CAPID.p12 /opt/tak/certs/files/packages/$capid
