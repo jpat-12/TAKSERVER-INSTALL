@@ -11,14 +11,6 @@ mkdir /opt/tak/certs/files/packages/finished
 
 echo "created create script in packages directory"
 
-echo "run variable script" 
-cd /tmp/TAKSERVER-INSTALL/Package-Creation
-sudo chmod +x /tmp/TAKSERVER-INSTALL/Package-Creation/variable.sh
-./variable.sh
-
-echo "variable script run" 
-
-
 echo "making create.sh script" 
 
 
@@ -42,7 +34,7 @@ echo ""
 echo "What is the namme of the user" 
 read name
 clear
-<PLACE VARIABLES HERE> 
+#Place-Variables-Here 
 
 
 cd /opt/tak/certs
@@ -151,3 +143,9 @@ rm -rf $capid.p12
 cp "$capid.zip" finished
 cp $capid.zip $httpd_path
 EOF
+
+echo "run variable script" 
+cd /tmp/TAKSERVER-INSTALL/Package-Creation
+sudo chmod +x /tmp/TAKSERVER-INSTALL/Package-Creation/variable.sh
+./variable.sh
+echo "variable script run" 
