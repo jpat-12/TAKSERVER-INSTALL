@@ -79,11 +79,6 @@ cat << EOF > "$directory$capid/MANIFEST/$manifest_file"
 </MissionPackageManifest>
 EOF
 
-echo "Running Varriables Script" 
-cd /opt/tak/certs/files/packages/
-./variables.sh
-echo ""
-
 echo "Creating Package_Builder.pref"
 
 cat << EOF > "$directory$capid/package_builder.pref"
@@ -131,5 +126,5 @@ cd /opt/tak/certs/files/packages
 zip $capid.zip -r $capid
 rm -rf $capid.p12
 rm -rf $capid
-cp "$capid.zip" finished
-cp $capid.zip $httpd_path
+cp $capid.zip finished
+cp $capid.zip $httpd
