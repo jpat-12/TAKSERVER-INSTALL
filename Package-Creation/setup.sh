@@ -28,3 +28,10 @@ cp /tmp/TAKSERVER-INSTALL/Package-Creation/Maps-Pref.zip /opt/tak/certs/files/pa
 
 echo "Copying Channels Package" 
 cp /tmp/TAKSERVER-INSTALL/Package-Creation/channels.zip /opt/tak/certs/files/packages/channels.zip
+
+echo "Setting up finished directory for certs" 
+cd /opt/tak/certs/files/packages 
+mkdir finished
+
+
+echo "INSTALL IS FINISHED" 

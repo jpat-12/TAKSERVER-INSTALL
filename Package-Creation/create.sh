@@ -120,7 +120,13 @@ cp /opt/tak/certs/files/$capid.p12 /opt/tak/certs/files/packages/$capid.p12
 
 cd /opt/tak/certs/files/packages 
 
-mkdir finished
+clear 
+
+echo "----------------------------------"
+echo "-------Zipping Cert Package-------"
+echo "-Moving Cert Package To Webserver-" 
+echo "----Cleaned Packages Directory----" 
+echo "----------------------------------"
 
 cd /opt/tak/certs/files/packages 
 zip $capid.zip -r $capid
@@ -128,3 +134,4 @@ rm -rf $capid.p12
 rm -rf $capid
 cp $capid.zip finished
 cp $capid.zip $httpd
+rm -rf $capid.zip
