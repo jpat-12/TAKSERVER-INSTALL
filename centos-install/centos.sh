@@ -12,7 +12,7 @@ clear
 
 echo "Setting Up Firewalld" 
 echo ""
-sudo yum install firewalld
+sudo yum install firewalld -y
 sudo systemctl start firewalld
 sudo systemctl enable firewalld
 sudo firewall-cmd --add-forward-port=port=443:proto=tcp:toport=8446
@@ -61,7 +61,7 @@ cp /tmp/centos-scripts/takUserCreateCerts_doNotRunAsRoot.sh /home/atak/Downloads
 
 echo "Downloading TAKServer" 
 cd /home/atak/Downloads
-sudo yum install wget
+sudo yum install wget -y
 sudo wget "https://docs.google.com/uc?export=download&confirm=t&id=1KQfiCPrN4z-v52xu48KYxUxGFRGApEpX" -O takserver-4.8-RELEASE31.noarch.rpm
 sudo wget "https://docs.google.com/uc?export=download&confirm=t&id=1n8oTPtRv4f5JS6UkeIDakQt-Z2TQdKGl" -O takserver-4.8-RELEASE45.noarch.rpm
 clear

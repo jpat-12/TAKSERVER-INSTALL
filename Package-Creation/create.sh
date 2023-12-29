@@ -3,10 +3,10 @@
 echo "This script will automatically create a data package and push it to a webserver for you" 
 echo ""
 echo ""
-echo "press enter to continue" 
-read enter
+#echo "press enter to continue" 
+#read enter
 
-echo "make a few lines that call on another script to make the variable and then use that variable and comment out this question after the first time it is being run" 
+#echo "make a few lines that call on another script to make the variable and then use that variable and comment out this question after the first time it is being run" 
 
 source /opt/tak/certs/files/packages/var.sh
 
@@ -14,11 +14,11 @@ cd /opt/tak/certs
 
 echo "What is the CAPID of the User" 
 read capid
-echo ""
-echo ""
-echo "What is the namme of the user" 
-read name
-clear
+#echo ""
+#echo ""
+#echo "What is the namme of the user" 
+#read name
+#clear
 #Place-Variables-Here 
 
 

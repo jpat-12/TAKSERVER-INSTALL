@@ -15,5 +15,5 @@ sudo yum install git && cd /tmp && git clone https://github.com/jpat-12/TAKSERVE
 
 ## DEB INSTALLER 
 ```bash
-sudo yum install git && cd /tmp/ && git clone https://github.com/jpat-12/takserver-deb-installer.git && cd TAKSERVER-INSTALL && cd takserver-deb-installer && sudo chmod +x install-deb.sh && . install-deb.sh
+sudo apt install git && cd /tmp/ && git clone https://github.com/jpat-12/takserver-deb-installer.git && cd TAKSERVER-INSTALL && cd takserver-deb-installer && sudo chmod +x install-deb.sh && . install-deb.sh
 ```

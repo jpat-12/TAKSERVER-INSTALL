@@ -34,4 +34,11 @@ cd /opt/tak/certs/files/packages
 mkdir finished
 
 
+echo "Would you like to setup the WebUI for requests? (y/n)"
+if [[ $choice == "y" ]]; then
+    cd /tmp/TAKSERVER-INSTALL/Package-Creation
+    sudo chmod +x webui.sh 
+    ./webui.sh
+  fi
+
 echo "INSTALL IS FINISHED" 
