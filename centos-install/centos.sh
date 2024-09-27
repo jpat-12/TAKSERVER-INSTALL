@@ -95,7 +95,7 @@ echo "Downloading New Manifest File"
 wget "https://docs.google.com/uc?export=download&confirm=t&id=1nUjwuI8XHRFsEiCqCUoLled9a4pyEf5M" -O webtak-manifest.json
 
 echo "Setting Up Incident Icons" 
-mv /tmp/'Incident Icons.zip' /opt/tak/extract/webtak/iconset/'Incident Icons.zip'
+mv /tmp/'Incident Icons.zip' /opt/tak/extract/webtak/iconsets/'Incident Icons.zip'
 cd /opt/tak/extract/webtak/iconset/
 unzip 'Incident Icons.zip'
 rm 'Incident Icons.zip'
